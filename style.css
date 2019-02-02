@@ -15,6 +15,7 @@ body {
     width: 25px;
     margin: 0 12px;
     font-size: 18px;
+    line-height: 1.8;
 }
 #contact-bar {
     background-color: #84BF32;
@@ -35,12 +36,11 @@ body {
     font-size: 17px;
     animation-name: fade;
 }
-@keyframes fade {
+/*@keyframes fade {
     0% { opacity: 0 };
     100% { opacity: 1 };
-}
+}*/
 #photo-carousel {
-    background: lightblue;
 }
 .carousel-image {    
     max-width: 100%;
@@ -52,8 +52,27 @@ body {
 }
 #home-display-grid {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-areas: 
+        "card-one card-two card-three"
+        "card-four card-five card-six";
     padding: 20px;
+}
+#card-1 { grid-area: card-one; }
+#card-2 { grid-area: card-two; }
+#card-3 { grid-area: card-three; }
+#card-4 { grid-area: card-four; }
+#card-5 { grid-area: card-five; }
+#card-6 { grid-area: card-six; }
+@media only screen and (max-width: 320px) {
+    #home-display-grid { 
+        grid-template-areas:
+            "card-one" 
+            "card-two" 
+            "card-three"
+            "card-four"
+            "card-five" 
+            "card-six";
+    }
 }
 .card {
     padding: 18px;
@@ -66,21 +85,19 @@ body {
     line-height: 1.5;
 }
 #product-pictures {
-    background: forestgreen;
+    display: grid;
+    grid-template-columns: auto auto auto;
 }
 footer {
     background: #222;
-    height: 200px;
+    padding: 20px;
+    color: #999;
 }
 nav {
     display: grid;
     grid-template-columns: 230px auto auto;
 } 
-#product-pictures {
-    display: grid;
-    grid-template-columns: auto auto auto;
+#slide-button {
+   display: none;
 }
-
-
-
 
