@@ -3,7 +3,7 @@ body {
     padding: 0; 
 }
 #navlist {
-    background-color: orangered;
+    background-color: #84BF32;
     color: white;
     padding: 8px;
     margin: 0;
@@ -15,16 +15,16 @@ body {
     list-style: none;
     display: inline;
     width: 25px;
-    margin: 0 12px;
+    margin: 0 25px;
+    line-height: 3;
     font-size: 18px;
 }
 #contact-bar {
-    background-color: #84BF32;
-    padding: 10px;
+    background-color: #ff9933;
+    padding: 5px;
     color: white;
     font-size: 17px;
-    line-height: 1.5;
-    text-align: center;
+    text-align: right;
 }
 #contact-bar p {
     margin: 10px;
@@ -46,7 +46,7 @@ body {
     max-width: 100%;
     max-height: 100%;
 }
-@media screen and (min-width: 1192px){
+@media screen and (min-width: 892px){
  #home-display-grid {
    display: grid; 
    grid-template-areas: 
@@ -66,11 +66,16 @@ body {
 #card-5 { grid-area: card-five; }
 #card-6 { grid-area: card-six; }
 .card {
-    padding: 18px;
+    padding: 8px;
     text-align: center;
     border: solid 1px #eee;
     margin: 10px auto;
-    width: 350px;
+    width: 300px;
+    border-radius: 5px;
+}
+.card img {
+    width: inherit;
+    border-radius: 5px;
 }
 .card p {
     text-align: left;
@@ -86,8 +91,17 @@ footer {
 }
 nav {
     display: grid;
-    grid-template-columns: 230px auto auto;
+    grid-template-columns: 230px auto;
 } 
+@media screen and (max-width: 420px){
+    nav {
+        display: block;
+        text-align: center;
+    }
+    #navlist li {
+        margin: 0 5px; 
+    }
+}
 #slide-button {
    display: none;
 }
