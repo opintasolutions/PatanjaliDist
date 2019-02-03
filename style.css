@@ -5,7 +5,7 @@ body {
 #navlist {
     background-color: orangered;
     color: white;
-    padding: 20px;
+    padding: 8px;
     margin: 0;
     text-align: center;
     overflow: auto;
@@ -17,15 +17,14 @@ body {
     width: 25px;
     margin: 0 12px;
     font-size: 18px;
-    line-height: 1.8;
-    overflow-x: scroll;
 }
 #contact-bar {
     background-color: #84BF32;
     padding: 10px;
     color: white;
     font-size: 17px;
-    text-align: right;
+    line-height: 1.5;
+    text-align: center;
 }
 #contact-bar p {
     margin: 10px;
@@ -38,12 +37,6 @@ body {
     border: none;
     font-size: 17px;
     animation-name: fade;
-}
-/*@keyframes fade {
-    0% { opacity: 0 };
-    100% { opacity: 1 };
-}*/
-#photo-carousel {
 }
 .carousel-image {    
     max-width: 100%;
@@ -93,7 +86,7 @@ footer {
 }
 nav {
     display: grid;
-    grid-template-columns: 230px auto;
+    grid-template-columns: 230px auto auto;
 } 
 #slide-button {
    display: none;
