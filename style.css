@@ -1,6 +1,13 @@
 body {
     margin: 0;
     padding: 0; 
+    text-align: center;
+    color: #333;
+    font-family: 'KoHo', sans-serif;
+}
+a {
+    text-decoration: none;
+    color: inherit;
 }
 #navlist {
     background-color: #84BF32;
@@ -10,14 +17,19 @@ body {
     text-align: center;
     overflow: auto;
     white-space: nowrap;
+    
 }
 #navlist li {
     list-style: none;
     display: inline;
     width: 25px;
-    margin: 0 25px;
+    padding: 23px;
     line-height: 3;
     font-size: 18px;
+}
+.active {
+    background: white;
+    color: #84Bf32;
 }
 #contact-bar {
     background-color: #ff9933;
@@ -39,8 +51,9 @@ body {
     animation-name: fade;
 }
 .carousel-image {    
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    max-height: 570px;
+    object-fit: cover;
 }
 .product-img {
     max-width: 100%;
@@ -59,6 +72,9 @@ body {
     grid-template-columns: auto auto auto;
  }
 }
+#logo {
+    background: white;
+}
 #card-1 { grid-area: card-one; }
 #card-2 { grid-area: card-two; }
 #card-3 { grid-area: card-three; }
@@ -70,8 +86,18 @@ body {
     text-align: center;
     border: solid 1px #eee;
     margin: 10px auto;
-    width: 300px;
+    width: 350px;
     border-radius: 5px;
+}
+@media screen and (max-width: 420px) {
+    .card {
+        width: 300px;
+    }
+}
+.cover {
+    width: 100%;
+    max-height: 140px;
+    object-fit: cover;
 }
 .card img {
     width: inherit;
@@ -90,7 +116,10 @@ footer {
     color: #999;
 }
 nav {
+    background: white;
     display: grid;
+    position: sticky;
+    top: 0px;
     grid-template-columns: 230px auto;
 } 
 @media screen and (max-width: 420px){
@@ -100,9 +129,34 @@ nav {
     }
     #navlist li {
         margin: 0 5px; 
-    }
+    } 
 }
 #slide-button {
    display: none;
+}
+.about-intro {
+    font-family: 'Mukta', sans-serif;
+    font-size: 20px;
+    padding: 30px;
+    text-align: left;
+    line-height: 1.8;
+}
+.vision-mission {
+    text-align: left;
+    padding: 30px;
+    font-size: 19px;
+    display: inline-block;
+}
+#about-img {
+    border-radius: 5px;
+    max-width: 100%;
+}
+@media screen and (min-width: 420px) {
+    .about-intro {
+        padding: 25px 90px;
+    }
+    .vision-mission {
+        padding: 70px;
+    }
 }
 
