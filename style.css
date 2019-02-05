@@ -228,4 +228,13 @@ textarea {
         width: 250px;
     }
 }
-
+#apply-submit-button {
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    background: orangered;
+    margin: 10px auto 50px auto;
+}
