@@ -17,7 +17,7 @@
      <ul id="navlist">
          <a href="index.html"><li>Home</li></a> 
          <a href="about.html"><li>About Us</li></a>
-         <a href="policy.html"><li>Policy</li></a>
+         <!--         <a href="policy.html"><li>Policy</li></a> -->
          <a href="contact.html"><li>Contact</li></a>
      <li class="active">Join Us</li>
      </ul>
@@ -25,13 +25,52 @@
  </nav>
  <div>
 
+        <button id="slide-button">Next</button>
 <img class="cover" src="images/cover1.jpg" />
      <h1>Join Us</h1>
-       
+<form>
+       <p class="label">First Name:</p>
+      <input id="apply-fname" type="text"> <br /><br />
+      <p class="label">Last Name:</p>
+      <input id="apply-sname" type="text"> <br /><br />
+       <p class="label">Mobile Number:</p>
+       <input id="apply-number" type="text"><br /><br />
+       <p class="label">Email Address:</p>
+       <input id="apply-email" type="email"> <br /><br />
+         <p class="label">Address:</p>
+          <textarea id="apply-address" rows="10" cols="45">
+          </textarea>
+        <p class="label">Pincode:</p>
+      <input id="apply-pincode" type="text"> <br /><br />  
+      <!-- 
+        Select Inputs  
+      -->
+      <p class="label">Apply For:</p>
+      <select id="apply-for" class="select-input">
+          <option>Please Select:</option>
+          <option>Distributor</option>
+          <option>Dealership</option>
+          <option>Mega Store</option>
+          <option>Retail Store</option>
+      </select> <br /><br />
+      <p class="label">Distributor Level:</p>
+      <select id="distributor-level" class="select-input">
+          <option>Please Select:</option>
+          <option>District Level</option>
+          <option>Tehsil Level</option>
+          <option>Mandi Level</option>
+      </select> <br /><br />
+      <p class="label">Expected Investment:</p>
+      <input id="expected-investment" type="text"> <br /><br />
+     <p class="label">Comments:</p>
+          <textarea id="apply-comments" rows="10" cols="45">
+          </textarea>
+   </form>
+   <button id="apply-submit-button">Submit</button>       
  </div>
  <footer>
       Copyright &copy; 2019, Patanjali Distributors
     </footer>
     
-    <script src="main.js"></script>
+    <script src="apply.js"></script>
 </body>

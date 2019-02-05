@@ -26,6 +26,7 @@ a {
     padding: 23px;
     line-height: 3;
     font-size: 18px;
+    margin: 0 19px;
 }
 .active {
     background: white;
@@ -58,8 +59,9 @@ a {
 .product-img {
     max-width: 100%;
     max-height: 100%;
+    justify-self: stretch;
 }
-@media screen and (min-width: 892px){
+@media screen and (min-width: 1110px){
  #home-display-grid {
    display: grid; 
    grid-template-areas: 
@@ -126,9 +128,15 @@ nav {
     nav {
         display: block;
         text-align: center;
+        padding: 0;
+    }
+    #navlist {
+        padding: 0;
     }
     #navlist li {
-        margin: 0 5px; 
+        margin: 0; 
+        padding: 16px;
+        font-size: 16px;
     } 
 }
 #slide-button {
@@ -157,6 +165,67 @@ nav {
     }
     .vision-mission {
         padding: 70px;
+    }
+}
+form {
+    text-align: left;
+    margin: 30px auto 0 auto;
+    padding: 18px;
+    width: 500px;
+}
+form input {
+    width: 450px;
+    font-size: 16px;
+    padding: 10px;
+    background: white;
+    color: black;
+    border: 0.5px solid darkgray;
+    border-radius: 3px;
+}
+form select {
+    width: 450px;
+    font-size: 16px;
+    padding: 10px;
+    background: white;
+    color: black;
+    border: 0.5px solid darkgray;
+    border-radius: 3px;
+}
+form p {
+    font-size: 16px;
+}
+form textarea {
+    background: white;
+    color: black;
+    border: 0.5px solid darkgray;
+    border-radius: 3px;
+}
+#contact-submit-button {
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    background: orangered;
+    margin: 10px auto 50px auto;
+}
+textarea {
+    font-size: 16px;
+    padding: 10px;
+}
+@media screen and (max-width: 550px) {
+    form {
+        width: 300px;
+    }
+    form input {
+        width: 250px;
+    }
+    form select {
+        width: 250px;
+    }
+    textarea {
+        width: 250px;
     }
 }
 
