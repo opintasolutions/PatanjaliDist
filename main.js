@@ -14,5 +14,7 @@ button.addEventListener("click", function(){
     if(currIndex === 2){ carouselImage.src = arr[0] }
     else{ carouselImage.src = arr[currIndex + 1] }
 })
-  
+
+
+
 
