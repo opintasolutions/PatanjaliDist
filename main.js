@@ -15,6 +15,20 @@ button.addEventListener("click", function(){
     else{ carouselImage.src = arr[currIndex + 1] }
 })
 
+let popupMessage = document.getElementById("popup-message")
+let popupSnoozeBtn = document.getElementById("popup-snooze-btn")
 
+let popup = () => setTimeout(() => {
+    popupMessage.style.display = "block"; 
+    popupSnoozeBtn.style.display = "block"; 
+}, 8000) 
 
+window.onload = popup()
+
+popupSnoozeBtn.addEventListener("click", () => {
+   console.log("snoozed")
+   popupMessage.style.display = "none";
+   popupSnoozeBtn.style.display = "none";
+   popup()
+})
 
