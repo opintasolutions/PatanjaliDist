@@ -26,18 +26,17 @@ const emailBody = {
           }
         ],
         "Subject": "Message from Contact Us",
-        "TextPart": encodeURIComponent(textBody),
+        "TextPart": 'some text',
         "HTMLPart": `<h3>${name}</h3><br /><h4>${email}</h4><h4>${number}</h4><br /><hr /><br /><p>${mssg}</p>`
       }
     ]
 }
-
-fetch("https://api.mailjet.com/v3.1/send", {
+let headers = new Headers()
+headers.append('Content-Type', 'application/json')
+headers.append('Authorization', 'Basic ' + btoa(username + ":" + password));
+fetch("https://cors-anywhere.herokuapp.com/https://api.mailjet.com/v3.1/send", {
   method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-    'Authorization': 'Basic '+ btoa(username + ':' + password)
-  },
+  headers: headers,
   body: JSON.stringify(emailBody)
 })
   .then((res) => {console.log(res); alert('email sent')})
