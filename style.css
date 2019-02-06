@@ -238,3 +238,33 @@ textarea {
     background: orangered;
     margin: 10px auto 50px auto;
 }
+#popup-box {
+    width: 120px;
+    padding: 10px;
+    background: forestgreen;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    border-radius: 7px;
+} 
+#popup-message {
+    padding: 5px;
+    border-radius: 5px;
+    background: lightgreen;
+    color: blue;
+    display: none; 
+    line-height: 2.5;
+}
+#popup-snooze-btn {
+    display: none;
+    color: #a44; 
+    background: transparent;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 110px; 
+    right: 8px;
+}
