@@ -1,47 +1,30 @@
 // contact form;
   
-let contactSubmit = document.querySelector("#contact-submit-button");
-contactSubmit.addEventListener("click", () => {
+  let contactSubmit = document.querySelector("#contact-submit-button");
+  contactSubmit.addEventListener("click", () => {
+   
+  const name = document.querySelector("#contact-name").value
+  const email = document.querySelector("#contact-email").value
+  const number = document.querySelector("#contact-number").value
+  const mssg = document.querySelector("#contact-feedback").value
+  const textBody = `Name:\n${name}\n\nContact:\n${number}\n\nEmail:\n${email}\n\nMessage:\n\n${mssg}`
+
+  const body = `<h2>Message</h2><b>Name: ${name}</b><br /><b>Contact: ${number}</b><br /><b>Email: ${email}</b><br /><p>${mssg}</p>`
+
+  const bodyEncoded = new URLSearchParams()
+  bodyEncoded.append('from_email', 'mail@opintasolutions.com')
+  bodyEncoded.append('to_email', 'pranavbhaskar17@gmail.com')
+  bodyEncoded.append('subject', 'message')
+  bodyEncoded.append('content', body)
+
+  fetch('https://wt-4896982400a54bf82243b9417c45f1ea-0.sandbox.auth0-extend.com/sendgrid_Patanjali', {
+    method: 'POST',
+    body: bodyEncoded,
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded' 
+    } 
+  })
+    .then(res => {console.log(res); res.statusText === "OK" ? alert('mail was sent succesfully') : null})
+    .catch(err => console.log(err))
  
-const name = document.querySelector("#contact-name").value
-const email = document.querySelector("#contact-email").value
-const number = document.querySelector("#contact-number").value
-const mssg = document.querySelector("#contact-feedback").value
-const textBody = `Name:\n${name}\n\nContact:\n${number}\n\nEmail:\n${email}\n\nMessage:\n\n${mssg}`
-
-const username = "15e42a15a135ef171a8444ac1f53112a"
-const password = "d5991b1b31ffdb109ef7ef4021f3cdc4"
-
-const emailBody = {
-    "Messages":[
-      {
-        "From": {
-          "Email": "mail@opintasolutions.com",
-          "Name": "Patanjali Distributor"
-        },
-        "To": [
-          {
-            "Email": "pranavbhaskar17@gmail.com",
-            "Name": "admin"
-          }
-        ],
-        "Subject": "Message from Contact Us",
-        "TextPart": 'some text',
-        "HTMLPart": `<h3>${name}</h3><br /><h4>${email}</h4><h4>${number}</h4><br /><hr /><br /><p>${mssg}</p>`
-      }
-    ]
-}
-let headers = new Headers()
-headers.append('Content-Type', 'application/json')
-headers.append('Authorization', 'Basic ' + btoa(username + ":" + password));
-fetch("https://cors-anywhere.herokuapp.com/https://api.mailjet.com/v3.1/send", {
-  method: 'POST',
-  headers: headers,
-  body: JSON.stringify(emailBody)
 })
-  .then((res) => {console.log(res); alert('email sent')})
-  .catch((err) => console.log(err))
-
-})
-
-
