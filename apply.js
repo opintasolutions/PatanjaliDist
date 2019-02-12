@@ -78,7 +78,8 @@ applySubmit.addEventListener("click", () => {
       bodyEncoded.append('to_email', 'pranavbhaskar17@gmail.com')
       bodyEncoded.append('subject', 'message')
       bodyEncoded.append('content', body)
-
+ 
+  // email to patanjali dist
     fetch('https://wt-4896982400a54bf82243b9417c45f1ea-0.sandbox.auth0-extend.com/sendgrid_Patanjali', {
       method: 'POST',
       body: bodyEncoded,
@@ -90,9 +91,43 @@ applySubmit.addEventListener("click", () => {
     .catch(err => console.log(err))
 
 
+  const rsvpBody = new URLSearchParams()
+    rsvpBody.append('from_email', 'mail@opintasolutions.com')
+    rsvpBody.append('to_email', email)
+    rsvpBody.append('subject', 'thank you for feedback')
+    rsvpBody.append('content', `<h2>Hello ${fname} ${sname}</h2><br /><h3>Thank you for contacting Patanjali Distributors, your feedbacks are appreciated.</h3>`)
 
+  // email to person applying
+   fetch('https://wt-4896982400a54bf82243b9417c45f1ea-0.sandbox.auth0-extend.com/sendgrid_Patanjali', {
+      method: 'POST',
+      body: rsvpBody,
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded' 
+      } 
+  })
+    .then(res => {console.log(res); res.statusText === "OK" ? console.log('rsvp sent') : null})
+    .catch(err => console.log(err))
+  
 
+  // sms to patanjali dist
+  let patanjali_dist_contact = 7559460339
 
+  let url = `https://api.msg91.com/api/sendhttp.php?country=91&sender=OPINTA&route=4&mobiles=${patanjali_dist_contact}&authkey=254145AmFnhfpgfGK5c27a269&message=${encodeURIComponent(text_body)}`
+    fetch(url, {
+      mode: 'no-cors' 
+    })
+      .then(res => res.json())
+      .then(data => console.log(data))
+      .catch(err => console.log(`ERROR OCCURED ${err}`))
+  
+  // sms to person applying 
+  let url_rsvp = `https://api.msg91.com/api/sendhttp.php?country=91&sender=OPINTA&route=4&mobiles=${number}&authkey=254145AmFnhfpgfGK5c27a269&message=${"thank you for applying for patanjali distributorship, we will reach out to you soon."}`
+    fetch(url_rsvp, {
+      mode: 'no-cors' 
+    })
+      .then(res => res.json())
+      .then(data => console.log(data))
+      .catch(err => console.log(`ERROR OCCURED ${err}`))
 })
 
 

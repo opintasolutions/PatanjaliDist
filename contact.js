@@ -17,6 +17,7 @@
   bodyEncoded.append('subject', 'message')
   bodyEncoded.append('content', body)
 
+  // email to patanjali dist
   fetch('https://wt-4896982400a54bf82243b9417c45f1ea-0.sandbox.auth0-extend.com/sendgrid_Patanjali', {
     method: 'POST',
     body: bodyEncoded,
@@ -26,5 +27,24 @@
   })
     .then(res => {console.log(res); res.statusText === "OK" ? alert('mail was sent succesfully') : null})
     .catch(err => console.log(err))
+
  
+  const rsvpBody = new URLSearchParams()
+  rsvpBody.append('from_email', 'mail@opintasolutions.com')
+  rsvpBody.append('to_email', email)
+  rsvpBody.append('subject', 'thank you for feedback')
+  rsvpBody.append('content', `<h2>Hello ${name}</h2><br /><h3>Thank you for contacting Patanjali Distributors, your feedbacks are appreciated.</h3>`)
+    
+ // email to person applying
+ fetch('https://wt-4896982400a54bf82243b9417c45f1ea-0.sandbox.auth0-extend.com/sendgrid_Patanjali', {
+    method: 'POST',
+    body: rsvpBody,
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded' 
+    } 
+  })
+    .then(res => {console.log(res); res.statusText === "OK" ? console.log('rsvp sent') : null})
+    .catch(err => console.log(err))
+ 
+
 })
