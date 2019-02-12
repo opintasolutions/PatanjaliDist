@@ -10,7 +10,7 @@ a {
     color: inherit;
 }
 #navlist {
-    background-color: #84BF32;
+    background-color: forestgreen;
     color: white;
     padding: 8px;
     margin: 0;
@@ -28,14 +28,18 @@ a {
     font-size: 18px;
     margin: 0 19px;
 }
+#navlist li:hover {
+    background: white; 
+    color: forestgreen;
+}
 .active {
     background: white;
-    color: #84Bf32;
+    color: forestgreen;
 }
 #contact-bar {
-    background-color: #ff9933;
+    background-color: gainsboro ;
     padding: 5px;
-    color: white;
+    color: #333;
     font-size: 17px;
     text-align: right;
 }
@@ -61,6 +65,7 @@ a {
     max-height: 100%;
     justify-self: stretch;
 }
+
 @media screen and (min-width: 1110px){
  #home-display-grid {
    display: grid; 
@@ -110,9 +115,6 @@ a {
     text-align: left;
     line-height: 1.5;
 }
-#product-pictures {
-    text-align: center;
-}
 footer {
     background: #222;
     padding: 20px;
@@ -143,26 +145,37 @@ nav {
 #slide-button {
    display: none;
 }
+@media screen and (min-width: 783px){
+    #about-info {
+        display: flex; 
+}   
+    #about-mission-vision {
+        display: flex; 
+    }
+}
+.about-img {
+   border-radius: 7px;
+   width: 80%;
+   height: 100%;
+   margin: 40px 20px;
+}
+
 .about-intro {
     font-family: 'Mukta', sans-serif;
-    font-size: 20px;
+    font-size: 17px;
     padding: 30px;
     text-align: left;
-    line-height: 1.8;
 }
 .vision-mission {
     text-align: left;
-    padding: 30px;
-    font-size: 19px;
+    padding: 20px;
+    font-size: 17px;
     display: inline-block;
 }
-#about-img {
-    border-radius: 5px;
-    max-width: 100%;
-}
+
 @media screen and (min-width: 420px) {
     .about-intro {
-        padding: 25px 90px;
+        padding: 10px 60px;
     }
     .vision-mission {
         padding: 70px;
@@ -242,7 +255,7 @@ textarea {
 #popup-box {
     width: 120px;
     padding: 10px;
-    background: forestgreen;
+    background: crimson;
     position: fixed;
     bottom: 5px;
     right: 5px;
@@ -251,14 +264,14 @@ textarea {
 #popup-message {
     padding: 5px;
     border-radius: 5px;
-    background: lightgreen;
+    background: #eff;
     color: blue;
     display: none; 
     line-height: 2.5;
 }
 #popup-snooze-btn {
     display: none;
-    color: #a44; 
+    color: #444; 
     background: transparent;
     font-size: 28px;
     font-weight: bold;
@@ -268,4 +281,28 @@ textarea {
     position: fixed;
     bottom: 110px; 
     right: 8px;
+}
+.select-input {
+    background: white;
+    padding: 5px;
+    font-size: 17px;
+    border-radius: 5px;
+    color: black;
+}
+.product-img-elem {
+   max-width: 260px;
+   max-height: 100%;
+   justify-self: center;
+   margin: 40px;
+}
+#products-grid h2 {
+   margin-top: 40px;
+   text-decoration: underline;
+}
+@media screen and (min-width: 1110px){
+.products-img-div {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+}
 }

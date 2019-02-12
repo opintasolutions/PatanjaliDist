@@ -17,34 +17,29 @@
      <ul id="navlist">
          <a href="index.html"><li>Home</li></a> 
          <a href="about.html"><li>About Us</li></a>
-         <!--         <a href="policy.html"><li>Policy</li></a> -->
-     <li class="active">Contact</li>
+         <a href="contact.html"><li>Contact</li>
          <a href="apply.html"><li>Join Us</li></a>
-         <a href="products.html"><li>Products</li></a>
+         <li class="active">Products</li>
      </ul>
          
  </nav>
- <div>
-
+ 
 <img class="cover" src="images/cover1.jpg" />
-     <h1>Contact Us</h1>
-     <form>
-         <p class="label">Name:</p>
-        <input id="contact-name" type="text"> <br /><br />
-         <p class="label">Mobile Number:</p>
-         <input id="contact-number" type="text"><br /><br />
-         <p class="label">Email Address:</p>
-         <input id="contact-email" type="email"> <br /><br />
-            <p class="label">Message:</p>
-            <textarea id="contact-feedback" rows="10" cols="45">
-            </textarea>
-            
-     </form>
-     <button id="contact-submit-button">Submit</button>    
- </div>
+
+     <h1>Products</h1>
+     <br />
+    <select id="category-select" class="select-input">
+          <option>Natural Food Products</option>
+          <option>Natural Health Care</option>
+          <option>Natural Personal Care</option>
+          <option>Ayurvedic Medicines</option>
+          <option>Herbal Home Care</option>
+          <option>Patanjali Publications</option>
+      </select>
+      <div id="products-grid"></div>
+     <script src="products.js"></script>
  <footer>
       Copyright &copy; 2019, Patanjali Distributors
     </footer>
-    
-    <script src="contact.js"></script>
+
 </body>
