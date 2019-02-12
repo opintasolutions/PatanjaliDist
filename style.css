@@ -119,6 +119,7 @@ footer {
     background: #222;
     padding: 20px;
     color: #999;
+    text-align: left;
 }
 nav {
     background: white;
@@ -254,32 +255,31 @@ textarea {
 }
 #popup-box {
     width: 120px;
-    padding: 10px;
-    background: crimson;
+    padding: 8px;
+    background: blue;
     position: fixed;
     bottom: 5px;
     right: 5px;
-    border-radius: 7px;
+    border-radius: 15px;
 } 
 #popup-message {
-    padding: 5px;
-    border-radius: 5px;
-    background: #eff;
-    color: blue;
+    border-radius: 15px;
+    background: blue;
+    color: white;
     display: none; 
-    line-height: 2.5;
+    line-height: 2;
+    font-weight: bold;
 }
 #popup-snooze-btn {
     display: none;
-    color: #444; 
+    color: crimson; 
     background: transparent;
     font-size: 28px;
     font-weight: bold;
-    padding: 0;
     border: none;
     cursor: pointer;
     position: fixed;
-    bottom: 110px; 
+    bottom: 80px; 
     right: 8px;
 }
 .select-input {
