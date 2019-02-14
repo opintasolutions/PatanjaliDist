@@ -13,7 +13,7 @@
 
   const bodyEncoded = new URLSearchParams()
   bodyEncoded.append('from_email', 'mail@opintasolutions.com')
-  bodyEncoded.append('to_email', 'pranavbhaskar17@gmail.com')
+  bodyEncoded.append('to_email', 'info@patanjalifranchise.store')
   bodyEncoded.append('subject', 'message')
   bodyEncoded.append('content', body)
 
