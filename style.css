@@ -122,7 +122,7 @@ footer {
 }
 
 footer i{
-   margin: 0 10px; 
+   margin: 0 15px; 
    font-size: 22px;
 } 
 .footer-address {
@@ -287,32 +287,32 @@ textarea {
     margin: 10px auto 50px auto;
 }
 #popup-box {
-    width: 120px;
-    padding: 8px;
-    background: blue;
+    padding: 9px;
+    background: crimson;
     position: fixed;
-    bottom: 5px;
-    right: 5px;
+    bottom: 40px;
+    right: 8px;
     border-radius: 15px;
 } 
 #popup-message {
     border-radius: 15px;
-    background: blue;
+    background: crimson;
     color: white;
     display: none; 
     line-height: 2;
     font-weight: bold;
+    padding: 0 3px;
 }
 #popup-snooze-btn {
     display: none;
-    color: crimson; 
+    color: #888; 
     background: transparent;
     font-size: 28px;
     font-weight: bold;
     border: none;
     cursor: pointer;
     position: fixed;
-    bottom: 80px; 
+    bottom: 90px; 
     right: 8px;
 }
 .select-input {
