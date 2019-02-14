@@ -44,7 +44,7 @@ a {
     text-align: right;
 }
 #contact-bar p {
-    margin: 10px;
+    margin-bottom: 10px;
     display: inline;
 }
 .call-to-action {
@@ -72,7 +72,7 @@ a {
    grid-template-areas: 
         "card-one card-two card-three"
         "card-four card-five card-six"; 
-   grid-gap: 50px;
+   grid-gap: 20px;
     padding: 40px;
  }
  #product-pictures {
@@ -117,8 +117,21 @@ a {
 }
 footer {
     background: #222;
-    padding: 20px;
-    color: #999;
+    color: #aaa;
+    text-align: left;
+}
+
+footer i{
+   margin: 0 10px; 
+   font-size: 22px;
+} 
+.footer-address {
+   width: 15em;
+   padding-top: 15px;
+}
+
+.footer-contacts p {
+   margin: 5px;
 }
 nav {
     background: white;
@@ -141,6 +154,16 @@ nav {
         padding: 16px;
         font-size: 16px;
     } 
+    .footer-contacts {
+        padding: 30px; 
+    }
+    .footer-flex {
+        padding: 15px; 
+        background: #111;
+    }
+    footer i {
+        margin: 10px; 
+    }
 }
 #slide-button {
    display: none;
@@ -151,6 +174,17 @@ nav {
 }   
     #about-mission-vision {
         display: flex; 
+    }
+    .footer-flex {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        background: #111;
+    }
+    .footer-contacts {
+       padding: 10px;
+       display: flex;
+       justify-content: space-around;
     }
 }
 .about-img {
@@ -254,32 +288,31 @@ textarea {
 }
 #popup-box {
     width: 120px;
-    padding: 10px;
-    background: crimson;
+    padding: 8px;
+    background: blue;
     position: fixed;
     bottom: 5px;
     right: 5px;
-    border-radius: 7px;
+    border-radius: 15px;
 } 
 #popup-message {
-    padding: 5px;
-    border-radius: 5px;
-    background: #eff;
-    color: blue;
+    border-radius: 15px;
+    background: blue;
+    color: white;
     display: none; 
-    line-height: 2.5;
+    line-height: 2;
+    font-weight: bold;
 }
 #popup-snooze-btn {
     display: none;
-    color: #444; 
+    color: crimson; 
     background: transparent;
     font-size: 28px;
     font-weight: bold;
-    padding: 0;
     border: none;
     cursor: pointer;
     position: fixed;
-    bottom: 110px; 
+    bottom: 80px; 
     right: 8px;
 }
 .select-input {
@@ -306,3 +339,6 @@ textarea {
     grid-gap: 20px;
 }
 }
+
+
+
