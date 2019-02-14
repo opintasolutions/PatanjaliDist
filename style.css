@@ -44,7 +44,7 @@ a {
     text-align: right;
 }
 #contact-bar p {
-    margin: 10px;
+    margin-bottom: 10px;
     display: inline;
 }
 .call-to-action {
@@ -72,7 +72,7 @@ a {
    grid-template-areas: 
         "card-one card-two card-three"
         "card-four card-five card-six"; 
-   grid-gap: 50px;
+   grid-gap: 20px;
     padding: 40px;
  }
  #product-pictures {
@@ -117,9 +117,21 @@ a {
 }
 footer {
     background: #222;
-    padding: 20px;
-    color: #999;
+    color: #aaa;
     text-align: left;
+}
+
+footer i{
+   margin: 0 10px; 
+   font-size: 22px;
+} 
+.footer-address {
+   width: 15em;
+   padding-top: 15px;
+}
+
+.footer-contacts p {
+   margin: 5px;
 }
 nav {
     background: white;
@@ -142,6 +154,16 @@ nav {
         padding: 16px;
         font-size: 16px;
     } 
+    .footer-contacts {
+        padding: 30px; 
+    }
+    .footer-flex {
+        padding: 15px; 
+        background: #111;
+    }
+    footer i {
+        margin: 10px; 
+    }
 }
 #slide-button {
    display: none;
@@ -152,6 +174,17 @@ nav {
 }   
     #about-mission-vision {
         display: flex; 
+    }
+    .footer-flex {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        background: #111;
+    }
+    .footer-contacts {
+       padding: 10px;
+       display: flex;
+       justify-content: space-around;
     }
 }
 .about-img {
@@ -306,3 +339,6 @@ textarea {
     grid-gap: 20px;
 }
 }
+
+
+
