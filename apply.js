@@ -75,7 +75,7 @@ applySubmit.addEventListener("click", () => {
 
     const bodyEncoded = new URLSearchParams()
       bodyEncoded.append('from_email', 'mail@opintasolutions.com')
-      bodyEncoded.append('to_email', 'pranavbhaskar17@gmail.com')
+      bodyEncoded.append('to_email', 'info@patanjalifranchise.store')
       bodyEncoded.append('subject', 'message')
       bodyEncoded.append('content', body)
  
@@ -110,7 +110,7 @@ applySubmit.addEventListener("click", () => {
   
 
   // sms to patanjali dist
-  let patanjali_dist_contact = 7559460339
+  let patanjali_dist_contact = 9674820528
 
   let url = `https://api.msg91.com/api/sendhttp.php?country=91&sender=OPINTA&route=4&mobiles=${patanjali_dist_contact}&authkey=254145AmFnhfpgfGK5c27a269&message=${encodeURIComponent(text_body)}`
     fetch(url, {
