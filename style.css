@@ -23,8 +23,8 @@ a {
     list-style: none;
     display: inline;
     width: 25px;
-    padding: 23px;
-    line-height: 3;
+    padding: 28px;
+    line-height: 3.5;
     font-size: 18px;
     margin: 0 19px;
 }
@@ -152,7 +152,7 @@ nav {
     }
     #navlist li {
         margin: 0; 
-        padding: 16px;
+        padding: 20px;
         font-size: 16px;
     } 
     .footer-contacts {
