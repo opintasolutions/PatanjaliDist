@@ -95,7 +95,7 @@ applySubmit.addEventListener("click", () => {
     rsvpBody.append('from_email', 'mail@opintasolutions.com')
     rsvpBody.append('to_email', email)
     rsvpBody.append('subject', 'thank you for feedback')
-    rsvpBody.append('content', `<h2>Hello ${fname} ${sname}</h2><br /><h3>Thank you for contacting Patanjali Distributors, your feedbacks are appreciated.</h3>`)
+    rsvpBody.append('content', `<h2>Hello ${fname} ${sname}</h2><br /><h3>Thank you for applying for ${applyFor} at patanjalifranchise.store, we will reach out to you shortly.</h3>`)
 
   // email to person applying
    fetch('https://wt-4896982400a54bf82243b9417c45f1ea-0.sandbox.auth0-extend.com/sendgrid_Patanjali', {
@@ -121,7 +121,7 @@ applySubmit.addEventListener("click", () => {
       .catch(err => console.log(`ERROR OCCURED ${err}`))
   
   // sms to person applying 
-  let url_rsvp = `https://api.msg91.com/api/sendhttp.php?country=91&sender=OPINTA&route=4&mobiles=${number}&authkey=254145AmFnhfpgfGK5c27a269&message=${"thank you for applying for patanjali distributorship, we will reach out to you soon."}`
+  let url_rsvp = `https://api.msg91.com/api/sendhttp.php?country=91&sender=OPINTA&route=4&mobiles=${parseInt(number.toString().slice(number.toString().length-10))}&authkey=254145AmFnhfpgfGK5c27a269&message=${"thank you for applying for patanjali distributorship, we will reach out to you soon."}`
     fetch(url_rsvp, {
       mode: 'no-cors' 
     })
