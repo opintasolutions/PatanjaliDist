@@ -12,7 +12,7 @@
   const body = `<h2>Message</h2><b>Name: ${name}</b><br /><b>Contact: ${number}</b><br /><b>Email: ${email}</b><br /><p>${mssg}</p>`
 
   const bodyEncoded = new URLSearchParams()
-  bodyEncoded.append('from_email', 'mail@opintasolutions.com')
+  bodyEncoded.append('from_email', email)
   bodyEncoded.append('to_email', 'info@patanjalifranchise.store')
   bodyEncoded.append('subject', 'message')
   bodyEncoded.append('content', body)
@@ -30,7 +30,7 @@
 
  
   const rsvpBody = new URLSearchParams()
-  rsvpBody.append('from_email', 'mail@opintasolutions.com')
+  rsvpBody.append('from_email', 'info@patanjalifranchise.store')
   rsvpBody.append('to_email', email)
   rsvpBody.append('subject', 'thank you for feedback')
   rsvpBody.append('content', `<h2>Hello ${name}</h2><br /><h3>Thank you for contacting Patanjali Distributors, your feedbacks are appreciated.</h3>`)

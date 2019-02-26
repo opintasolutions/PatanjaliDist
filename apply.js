@@ -74,7 +74,7 @@ applySubmit.addEventListener("click", () => {
     </body></html>`
 
     const bodyEncoded = new URLSearchParams()
-      bodyEncoded.append('from_email', 'mail@opintasolutions.com')
+      bodyEncoded.append('from_email', email)
       bodyEncoded.append('to_email', 'info@patanjalifranchise.store')
       bodyEncoded.append('subject', 'message')
       bodyEncoded.append('content', body)
@@ -92,7 +92,7 @@ applySubmit.addEventListener("click", () => {
 
 
   const rsvpBody = new URLSearchParams()
-    rsvpBody.append('from_email', 'mail@opintasolutions.com')
+    rsvpBody.append('from_email', 'info@patanjalifranchise.store')
     rsvpBody.append('to_email', email)
     rsvpBody.append('subject', 'thank you for feedback')
     rsvpBody.append('content', `<h2>Hello ${fname} ${sname}</h2><br /><h3>Thank you for applying for ${applyFor} at patanjalifranchise.store, we will reach out to you shortly.</h3>`)
