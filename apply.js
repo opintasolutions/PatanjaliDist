@@ -121,7 +121,7 @@ applySubmit.addEventListener("click", () => {
       .catch(err => console.log(`ERROR OCCURED ${err}`))
   
   // sms to person applying 
-  let url_rsvp = `https://api.msg91.com/api/sendhttp.php?country=91&sender=patanj&route=4&mobiles=${parseInt(number.toString().slice(number.toString().length-10))}&authkey=264803AKbHj3xJn5c74aab3&message=${`Thank you for applying with ${applyFor}. We will reach out to you soon."}`
+  let url_rsvp = `https://api.msg91.com/api/sendhttp.php?country=91&sender=patanj&route=4&mobiles=${parseInt(number.toString().slice(number.toString().length-10))}&authkey=264803AKbHj3xJn5c74aab3&message=${`Thank you for applying with ${applyFor}. We will reach out to you soon.`}`
     fetch(url_rsvp, {
       mode: 'no-cors' 
     })
