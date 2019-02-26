@@ -74,7 +74,7 @@ applySubmit.addEventListener("click", () => {
     </body></html>`
 
     const bodyEncoded = new URLSearchParams()
-      bodyEncoded.append('from_email', 'mail@opintasolutions.com')
+      bodyEncoded.append('from_email', email)
       bodyEncoded.append('to_email', 'info@patanjalifranchise.store')
       bodyEncoded.append('subject', 'message')
       bodyEncoded.append('content', body)
@@ -92,10 +92,10 @@ applySubmit.addEventListener("click", () => {
 
 
   const rsvpBody = new URLSearchParams()
-    rsvpBody.append('from_email', 'mail@opintasolutions.com')
+    rsvpBody.append('from_email', 'info@patanjalifranchise.store')
     rsvpBody.append('to_email', email)
-    rsvpBody.append('subject', 'thank you for feedback')
-    rsvpBody.append('content', `<h2>Hello ${fname} ${sname}</h2><br /><h3>Thank you for applying for ${applyFor} at patanjalifranchise.store, we will reach out to you shortly.</h3>`)
+    rsvpBody.append('subject', 'thank you for applying')
+    rsvpBody.append('content', `<h2>Hello ${fname} ${sname}</h2><br /><h3>Thank you for applying with ${applyFor} at patanjalifranchise.store. We will reach out to you shortly.</h3>`)
 
   // email to person applying
    fetch('https://wt-4896982400a54bf82243b9417c45f1ea-0.sandbox.auth0-extend.com/sendgrid_Patanjali', {
@@ -121,7 +121,7 @@ applySubmit.addEventListener("click", () => {
       .catch(err => console.log(`ERROR OCCURED ${err}`))
   
   // sms to person applying 
-  let url_rsvp = `https://api.msg91.com/api/sendhttp.php?country=91&sender=patanj&route=4&mobiles=${parseInt(number.toString().slice(number.toString().length-10))}&authkey=264803AKbHj3xJn5c74aab3&message=${"thank you for applying for patanjali distributorship, we will reach out to you soon."}`
+  let url_rsvp = `https://api.msg91.com/api/sendhttp.php?country=91&sender=patanj&route=4&mobiles=${parseInt(number.toString().slice(number.toString().length-10))}&authkey=264803AKbHj3xJn5c74aab3&message=${`Thank you for applying with ${applyFor}. We will reach out to you soon.`}`
     fetch(url_rsvp, {
       mode: 'no-cors' 
     })
