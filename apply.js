@@ -112,7 +112,7 @@ applySubmit.addEventListener("click", () => {
   // sms to patanjali dist
   let patanjali_dist_contact = 9674820528
 
-  let url = `https://api.msg91.com/api/sendhttp.php?country=91&sender=OPINTA&route=4&mobiles=${patanjali_dist_contact}&authkey=254145AmFnhfpgfGK5c27a269&message=${encodeURIComponent(text_body)}`
+  let url = `https://api.msg91.com/api/sendhttp.php?country=91&sender=patanj&route=4&mobiles=${patanjali_dist_contact}&authkey=264803AKbHj3xJn5c74aab3&message=${encodeURIComponent(text_body)}`
     fetch(url, {
       mode: 'no-cors' 
     })
@@ -121,7 +121,7 @@ applySubmit.addEventListener("click", () => {
       .catch(err => console.log(`ERROR OCCURED ${err}`))
   
   // sms to person applying 
-  let url_rsvp = `https://api.msg91.com/api/sendhttp.php?country=91&sender=OPINTA&route=4&mobiles=${parseInt(number.toString().slice(number.toString().length-10))}&authkey=254145AmFnhfpgfGK5c27a269&message=${"thank you for applying for patanjali distributorship, we will reach out to you soon."}`
+  let url_rsvp = `https://api.msg91.com/api/sendhttp.php?country=91&sender=patanj&route=4&mobiles=${parseInt(number.toString().slice(number.toString().length-10))}&authkey=264803AKbHj3xJn5c74aab3&message=${"thank you for applying for patanjali distributorship, we will reach out to you soon."}`
     fetch(url_rsvp, {
       mode: 'no-cors' 
     })
